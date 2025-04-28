@@ -22,8 +22,7 @@ public class Store {
 
             String dataLine;
             String[] dataFields;
-            while(br.readLine() != null){
-                dataLine = br.readLine();
+            while((dataLine = br.readLine()) != null){
                 dataFields = dataLine.split("\\|");
                 Product newProduct = new Product (Integer.parseInt(dataFields[0]), dataFields[1], Float.parseFloat(dataFields[2]));
                 inventory.add(newProduct);
